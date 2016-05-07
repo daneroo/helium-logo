@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512">
+  <title>PSaaS Logo</title>
+  <!--
+    TODO(daneroo): 
+      - make layer a projection
+      - clippath for hidden line removal
+      - preserve transparency in stack
+      - 3 or 4 layers?
+
+    Irdeto Purple  HEX #5D176A  RGB 93R.23G.106B
+    Irdeto Green   HEX #AEBF1E  RGB 174R.191G.30B
+  -->
+  <style>
+    .purple {
+      fill:white;
+      stroke: #5D176A;
+      stroke-width:50px;
+      stroke-linejoin:round;
+    }
+    .green {
+      fill:#AEBF1E;
+      /*
+      stroke: #AEBF1E;
+      stroke-width:10px; 
+      stroke-linejoin:round;
+      */
+    }
+  </style>
+  <defs>
+    <filter id="dropshadow" x="-100%" y="-100%" width="250%" height="250%">
+      <feOffset result="offOut" in="SourceGraphic" dx="1" dy="1" />
+      <feGaussianBlur result="blurOut" in="offOut" stdDeviation="2" />
+      <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+    </filter>
+    <polygon id="square" points="-100,100, 100,100, 100,-100, -100,-100"/>
+
+    <!-- <polygon id="losange" Zstyle="fill:none" points="0,-100 86.6,-50 0 0 -86.6,-50"/> -->
+    <g id= "losange" transform="translate(0,-50) scale(.707) scale(.866,.5) rotate(45)" >
+      <use xlink:href="#square"/>
+    </g>
+
+    <polygon id="hex" style="fill:none;stroke-linejoin:round;stroke-width:10px" points="0,100 86.6,50 86.6,-50 0,-100 -86.6,-50 -86.6,50"/>
+  </defs>
+
+
+
+<g id="outline" transform="translate(256,256) scale(2.56)" style="fill:none; stroke-width:1px">
+  <use xlink:href="#square" stroke="#ccc"/>
+</g>
+
+<g transform="translate(256,230)" >
+  <g id="hexComposed" transform="scale(2.0)" >
+    <use xlink:href="#hex" stroke="#777" filter="url(#dropshadow)" />
+    <use xlink:href="#hex" stroke="#fff"  />
+    <clipPath id="lefthalf">
+      <rect x="-120" y="-120" width="120" height="240" />
+    </clipPath>
+    <use xlink:href="#hex" stroke="#EBEBEB" clip-path="url(#lefthalf)" />
+  </g>
+
+  <!-- bottom up -->
+  <g transform="scale(1.5)" >
+    <g transform="translate(0,100)" >
+      <use xlink:href="#losange" class="purple" />
+    </g>
+    <g transform="translate(0,50)">
+      <use xlink:href="#losange" class="purple" />
+    </g>
+<!-- for a stack of 4 (33,66)
+    <g transform="translate(0,66)">
+      <use xlink:href="#losange" class="purple"/>
+    </g>
+ -->
+    <g transform="translate(0, 0)" >
+      <use xlink:href="#losange" class="purple" />
+    </g>
+    <g transform="translate(0, -37) scale(.25) " class="green">
+      <use xlink:href="#losange" />
+    </g>
+  </g>
+
+</g>
+
+<text id="PSaaS" transform="translate(256,500) scale(2)" font-family="monospace" font-size="40" text-anchor="middle">
+    PSaaS
+</text>
+
+</svg>
