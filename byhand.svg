@@ -45,9 +45,9 @@
     }
     #outline {
      /* 
+      fill: #ccc; 
      */
       fill:none; 
-      fill: #ccc; 
       stroke-width: 0px;
       stroke: #ccc;
     }
