@@ -4,6 +4,7 @@ Looks like a __Video Watermark__, feels like a __Job Queue__ 8-).
 
 Lovingly handcrafted in SVG. Just for fun.
 
+Link to: [_static website to show the logo_](https://logo.he.ir-si.com/)
 <center>
 <img src="public/Helium.sans-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
 <img src="public/Helium-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
@@ -23,6 +24,10 @@ This is how we generated the favicon (all platform/mobile flavors)
   - Set `/icons` as path.
   - Also has a node module: `npm install -g cli-real-favicon`
 - Use gitlab Pages to show the logo(s) and favicons
+  - Deployed with Gitlab Pages, but not accessible..network issues most likely
+- Also published to netlify
+  - [Our domain, with ssl](https://logo.he.ir-si.com/)
+  - [Netlify domain name](https://logo-he.netlify.com/)
 ```
 http-server public &
 open http://0.0.0.0:8080/
