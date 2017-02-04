@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    * {
+      font-family: sans-serif;
+    }
+</style>
+<script>
+
+
+function rasterize(elt){
+  var sizes = [1024,256]
+
+  var name = elt.src
+  name = name.substr(name.lastIndexOf('/')+1) // remove all but filename
+
+  console.log('Rasterizing...',name)
+  sizes.forEach(function(size){
+    var pngname = name.replace('.svg','-'+size+'.png')
+
+    //  make an new image from the svg (must set both width and height)
+    var img = document.createElement('img');
+    img.src = elt.src;
+    img.setAttribute('width', ''+size);
+    img.setAttribute('height', ''+size);
+
+    img.onload = function() {
+      console.log('  ->',pngname,img.width,'x',img.height)
+
+      var can = document.createElement("canvas")
+      can.height = img.height
+      can.width = img.width
+      can.getContext('2d').drawImage(img, 0, 0)
+
+      var a = document.createElement("a")
+      a.download = pngname
+      a.href = can.toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream')
+      a.click()
+    };
+  })
+}
+</script>
+
+</head>
+<body>
+
+<h4>Click on image to rasterize</h4>
+<img id="img" src="Helium.sans.svg" width=256 onclick="rasterize(this)">
+<img id="img" src="Helium.svg" width=256 onclick="rasterize(this)">
+</body>
+</html>
