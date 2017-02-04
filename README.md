@@ -5,14 +5,11 @@ Looks like a __Video Watermark__, feels like a __Job Queue__ 8-).
 Lovingly handcrafted in SVG. Just for fun.
 
 <center>
-<div style="background-color:#fff;border-radius: 10px; display:inline-block">
-<img src="public/Helium.sans-256.png" width=192>
-</div>
-&nbsp;&nbsp;&nbsp;
-<div style="background-color:#fff;border-radius: 10px; display:inline-block">
-<img src="public/Helium-256.png" width=192>
-</div>
+<img src="public/Helium.sans-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
+<img src="public/Helium-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
 </center>
+
+
 
 ## Rasterized in Chrome (1024px,256px)
 ```
