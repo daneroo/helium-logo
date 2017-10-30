@@ -4,7 +4,9 @@ Looks like a __Video Watermark__, feels like a __Job Queue__ 8-).
 
 Lovingly handcrafted in SVG. Just for fun.
 
-Link to: [_static website to show the logo_](https://logo.he.ir-si.com/)
+
+Link to: [_static website to show the logo_](http://logo-he.netlify.com/)
+Previously aliased to https://logo.he.ir-si.com/
 <center>
 <img src="public/Helium.sans-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
 <img src="public/Helium-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
