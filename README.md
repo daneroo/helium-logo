@@ -5,14 +5,21 @@ Looks like a __Video Watermark__, feels like a __Job Queue__ 8-).
 Lovingly handcrafted in SVG. Just for fun.
 
 
-Link to: [_static website to show the logo_](http://logo-he.netlify.com/)
+Link to: [_static website to show the logo_](https://helium-logo.netlify.com/)
 Previously aliased to https://logo.he.ir-si.com/
 <center>
 <img src="public/Helium.sans-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
 <img src="public/Helium-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
 </center>
 
+## Deploy to Netlify
+```
+brew tap netlify/netlifyctl
+brew install netlifyctl
 
+## netlify.toml contains site-id, --base-directory is not stored there yet
+netlifyctl deploy -b public
+```
 
 ## Rasterized in Chrome (1024px,256px)
 ```
@@ -29,7 +36,7 @@ This is how we generated the favicon (all platform/mobile flavors)
   - [Deployed with Gitlab Pages](http://helium.gitlab-pages.hdc.engineering.intra/helium-logo), but not accessible..network issues most likely
 - Also published to netlify
   - [Our domain, with ssl](https://logo.he.ir-si.com/)
-  - [Netlify domain name](https://logo-he.netlify.com/)
+  - [Netlify domain name](https://helium-logo.netlify.com/)
 ```
 http-server public &
 open http://0.0.0.0:8080/
