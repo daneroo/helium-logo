@@ -4,7 +4,6 @@ Looks like a __Video Watermark__, feels like a __Job Queue__ 8-).
 
 Lovingly handcrafted in SVG. Just for fun.
 
-
 Link to: [_static website to show the logo_](https://helium-logo.netlify.com/)
 Previously aliased to https://logo.he.ir-si.com/
 <center>
@@ -12,8 +11,24 @@ Previously aliased to https://logo.he.ir-si.com/
 <img src="public/Helium-256.png" width="128" style="background-color:#fff;border-radius: 10px; padding:10px; margin: 10px">
 </center>
 
-## Deploy to Netlify
+## History
+
+Historical git remotes
+
+```text
+# after irdeto on gitlab private
+origin	git@gitlab.com:daneroo/helium-xrobot-logo.git
+
+# at Irdeto
+emea git@gitlab.emea.irdeto.com:helium/helium-logo.git (push)
+forked git@gitlab.amer.irdeto.com:PSaaS/logo.git (push)
+origin git@gitlab.infra.opd:helium/helium-logo.git (fetch)
+origin	git@gitlab.infra.opd:helium/helium-logo.git (push)
 ```
+
+## Deploy to Netlify
+
+```bash
 brew tap netlify/netlifyctl
 brew install netlifyctl
 
@@ -22,13 +37,17 @@ netlifyctl deploy -b public
 ```
 
 ## Rasterized in Chrome (1024px,256px)
-```
+
+```bash
 http-server . &
 open http://0.0.0.0:8080/rasterize.html
 fg
 ```
+
 ## Gitlab Pages and favicons
+
 This is how we generated the favicon (all platform/mobile flavors)
+
 - [Favicon Generator](http://realfavicongenerator.net/)
   - Set `/icons` as path.
   - Also has a node module: `npm install -g cli-real-favicon`
@@ -37,27 +56,34 @@ This is how we generated the favicon (all platform/mobile flavors)
 - Also published to netlify
   - [Our domain, with ssl](https://logo.he.ir-si.com/)
   - [Netlify domain name](https://helium-logo.netlify.com/)
-```
+
+```bash
 http-server public &
 open http://0.0.0.0:8080/
 fg
 ```
+
 ## Colors
+
 Irdeto [brand guidelines](http://irdeto.com/brand-guidelines/brand-guidelines.html)
 
 - Irdeto Purple
 
+```text
         HEX #5D176A
         RGB 93R.23G.106B
         CMYK 66C.100M.8Y.27K
         PMS 260 C
+```
 
 - Irdeto Green
 
+```text
         HEX #AEBF1E
         RGB 174R.191G.30B
         CMYK 25C.0M.100Y.15K
         PMS 583 C
+```
 
 ## Prior Art
 _Adapted from artwork I did for PSaaS.._
