@@ -17,13 +17,13 @@ Historical git remotes
 
 ```text
 # after irdeto on gitlab private
-origin	git@gitlab.com:daneroo/helium-xrobot-logo.git
+origin git@gitlab.com:daneroo/helium-xrobot-logo.git
 
 # at Irdeto
-emea git@gitlab.emea.irdeto.com:helium/helium-logo.git (push)
-forked git@gitlab.amer.irdeto.com:PSaaS/logo.git (push)
-origin git@gitlab.infra.opd:helium/helium-logo.git (fetch)
-origin	git@gitlab.infra.opd:helium/helium-logo.git (push)
+emea git@gitlab.emea.irdeto.com:helium/helium-logo.git
+forked git@gitlab.amer.irdeto.com:PSaaS/logo.git
+origin git@gitlab.infra.opd:helium/helium-logo.git
+origin git@gitlab.infra.opd:helium/helium-logo.git
 ```
 
 ## Deploy to Netlify
